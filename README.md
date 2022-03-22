@@ -3,7 +3,7 @@
 使用方法
 必须有的init，然后就是设置回调函数，自定义自己的操作
 通过解码回调出来的都是YUV图像，软解出来的是YUV420P，硬解出来的是YUV420SP
-
+```C++
 Decoder *decoder = new H264MPPDecoder(width, height);
     decoder->setDecodeCallBack([&](cv::Mat &yuvImg){
         cv::Mat rgbImg(height, width, CV_8UC3);
@@ -23,3 +23,4 @@ Decoder *decoder = new H264MPPDecoder(width, height);
             }
         }
     }
+```
